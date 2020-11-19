@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @warrior.title %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @warrior.address %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @warrior.latitude %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @warrior.longitude %>
+</p>
+
+<p>
+  <strong>Elevation:</strong>
+  <%= @warrior.elevation %>
+</p>
+
+<p>
+  <strong>Wins:</strong>
+  <%= @warrior.wins %>
+</p>
+
+<p>
+  <strong>Losses:</strong>
+  <%= @warrior.losses %>
+</p>
+
+<p>
+  <strong>Ties:</strong>
+  <%= @warrior.ties %>
+</p>
+
+<%= link_to 'Edit', edit_warrior_path(@warrior) %> |
+<%= link_to 'Back', warriors_path %>

@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  address: MyString
+  latitude: 1.5
+  longitude: 1.5
+  elevation: 1.5
+  wins: 1
+  losses: 1
+  ties: 1
+
+two:
+  title: MyString
+  address: MyString
+  latitude: 1.5
+  longitude: 1.5
+  elevation: 1.5
+  wins: 1
+  losses: 1
+  ties: 1
