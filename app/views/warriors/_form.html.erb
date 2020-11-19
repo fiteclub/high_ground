@@ -1,0 +1,57 @@
+<%= form_with(model: warrior, local: true) do |form| %>
+  <% if warrior.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(warrior.errors.count, "error") %> prohibited this warrior from being saved:</h2>
+
+      <ul>
+        <% warrior.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_field :address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :latitude %>
+    <%= form.text_field :latitude %>
+  </div>
+
+  <div class="field">
+    <%= form.label :longitude %>
+    <%= form.text_field :longitude %>
+  </div>
+
+  <div class="field">
+    <%= form.label :elevation %>
+    <%= form.text_field :elevation %>
+  </div>
+
+  <div class="field">
+    <%= form.label :wins %>
+    <%= form.number_field :wins %>
+  </div>
+
+  <div class="field">
+    <%= form.label :losses %>
+    <%= form.number_field :losses %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ties %>
+    <%= form.number_field :ties %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
