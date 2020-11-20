@@ -61,6 +61,13 @@ class WarriorsController < ApplicationController
     end
   end
 
+  def duel
+    @player_one = Warrior.all.sample
+    @player_two = Warrior.all.sample
+    @results = Warrior.duel(@player_one, @player_two)
+  end
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_warrior
