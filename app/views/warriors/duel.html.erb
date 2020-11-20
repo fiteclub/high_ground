@@ -1,0 +1,21 @@
+<h1> It's over <%= @results[:loser] %>
+<p>
+  <h3>
+    <%= @player_one.title %>
+  </h3>
+  <h1>
+    VS
+  </h1>
+  <h3>
+    <%= @player_two.title %>
+  </h3>
+</p>
+<p>
+  <% if @results[:tie] %>
+    <h1>Inconceivable!</h1>
+    <h2>It is a draw! Both players had an elevation of <%= @player_one.elevation.round(2) %> meters!</h2>
+  <% else %>
+    <%= "#{@results[:winner]} defeated #{@results[:loser]}" %>
+    <%= "with a difference of #{@results[:elevation_diff].round(2)} meters." %>
+  <% end %>
+</p>
