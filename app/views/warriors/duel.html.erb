@@ -1,20 +1,20 @@
-  <div class = "site-wrapper">
-    <div class = "site-wrapper-inner">
-      <div class = "cover-container">
+<div class = "site-wrapper">
+  <div class = "site-wrapper-inner">
+    <div class = "cover-container">
 
-      <%= video_tag "flame_effect.mp4", 
-          id:'background', 
-          autoplay: true, 
-          muted: false, 
-          poster: 'flame_effect.png' 
-      %>
-      <%= %>
-          <% if @results[:tie] %>
-            <%= render "tie" %>
-          <% else %>
-            <%= render "victory" %>
-          <% end %>
-        </p>
-      </div>
+    <%= video_tag "flame_effect.mp4", 
+        id:'background', 
+        autoplay: true, 
+        muted: false, 
+        poster: 'flame_effect.png' 
+    %>
+    
+        <% if @results[:tie] %>
+          <%= render "tie" %>
+        <% else %>
+          <%= render "victory" %>
+        <% end %>
+      </p>
     </div>
   </div>
+</div>
