@@ -1,25 +1,31 @@
-<div class="home-video-wrapper">
-  <%= video_tag "flame_effect.mp4" %>
-</div>
+  <div class = "site-wrapper">
+    <div class = "site-wrapper-inner">
+      <div class = "cover-container">
 
-<h1> It's over <%= @results[:loser] %>
-<p>
-  <h3>
-    <%= @player_one.title %>
-  </h3>
-  <h1>
-    VS
-  </h1>
-  <h3>
-    <%= @player_two.title %>
-  </h3>
-</p>
-<p>
-  <% if @results[:tie] %>
-    <h1>Inconceivable!</h1>
-    <h2>It is a draw! Both players had an elevation of <%= @player_one.elevation.round(2) %> meters!</h2>
-  <% else %>
-    <%= "#{@results[:winner]} defeated #{@results[:loser]}" %>
-    <%= "with a difference of #{@results[:elevation_diff].round(2)} meters." %>
-  <% end %>
-</p>
+        <%= video_tag "flame_effect.mp4", id:'background', autoplay: true, muted: false, poster: 'flame_effect.png' %>
+
+        <h1> It's over <%= @results[:loser] %>
+        <p>
+          <img id="obi1" src="<%= asset_path('obi1.jpg') %>" >
+          <h3>
+            <%= @player_one.title %>
+          </h3>
+          <h1>
+            VS
+          </h1>
+          <h3>
+            <%= @player_two.title %>
+          </h3>
+        </p>
+        <p>
+          <% if @results[:tie] %>
+            <h1>Inconceivable!</h1>
+            <h2>It is a draw! Both players had an elevation of <%= @player_one.elevation.round(2) %> meters!</h2>
+          <% else %>
+            <%= "#{@results[:winner]} defeated #{@results[:loser]}" %>
+            <%= "with a difference of #{@results[:elevation_diff].round(2)} meters." %>
+          <% end %>
+        </p>
+      </div>
+    </div>
+  </div>
