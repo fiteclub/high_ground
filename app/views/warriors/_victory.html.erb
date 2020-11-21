@@ -1,0 +1,10 @@
+        <h1> It's over <%= @results[:loser] %>!</h1>
+        <h1> <%= @results[:winner] %> has the high ground!</h1>
+        <p>
+          <img id="obi1" src="<%= asset_path('obi1.jpg') %>" >
+          <%= render "versus" %>
+        </p>
+        <p>
+          <%= "#{@results[:winner]} defeated #{@results[:loser]}" %>
+          <%= "with a difference of #{@results[:elevation_diff].round(2)} meters." %>
+        </p>
