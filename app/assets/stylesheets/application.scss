@@ -15,29 +15,62 @@
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
 
-img {
+img.result {
   border-radius: 60%;
 }
 
-
-#background {
-  position:fixed;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: -100;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-  background: image-url('flame_effect.png') no-repeat;
-  background-size: cover;
-  background: linear-gradient(
-                     rgba(20,20,20, .5), 
-                     rgba(20,20,20, .5)),
-                     image-url('vs_text.png');
+img.result.tie {
+  height: 500px;
 }
+
+body, html {
+  height: 100%;
+}
+
+.bg.gif{
+  /* The image used */
+  background-image: url('flame_effect.gif');
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg.versus{
+  /* The image used */
+  background-image: url('vs_text.png');
+
+  /* Full height */
+  height: 50%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+// #background {
+//   position:fixed;
+//   top: 50%;
+//   left: 50%;
+//   min-width: 100%;
+//   min-height: 100%;
+//   width: auto;
+//   height: auto;
+//   z-index: -100;
+//   -webkit-transform: translateX(-50%) translateY(-50%);
+//   transform: translateX(-50%) translateY(-50%);
+//   background: image-url('flame_effect.png') no-repeat;
+//   background-size: cover;
+//   background: linear-gradient(
+//                      rgba(20,20,20, .5), 
+//                      rgba(20,20,20, .5)),
+//                      image-url('vs_text.png');
+// }
 
 .layer {
   background-color: rgba(50, 50, 50, 0.7);

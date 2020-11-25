@@ -1,9 +1,9 @@
 <h1>Inconceivable!</h1>
 <h2>It is a draw! Both players had an elevation of <%= @player_one.elevation.round(2) %> meters!</h2>
 <p>
-  <img id="tie" src="<%= asset_path('tie.jpg') %>" >
+  <%= image_tag("tie.jpg", class: "result tie") %>
   <%= render "versus" %>
 </p>
 <p>
-  Who wrote this script?
+  I can't even... who wrote this script??
 </p>

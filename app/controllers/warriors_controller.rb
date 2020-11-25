@@ -63,19 +63,19 @@ class WarriorsController < ApplicationController
 
   def duel
     @player_one = Warrior.all.sample
-    @player_two = Warrior.all.sample
+    @player_two = params[:tie] ? @player_one : Warrior.all.sample
     @results = Warrior.duel(@player_one, @player_two)
   end
 
-
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_warrior
-      @warrior = Warrior.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def warrior_params
-      params.require(:warrior).permit(:title, :address, :latitude, :longitude, :elevation, :wins, :losses, :ties)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_warrior
+    @warrior = Warrior.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def warrior_params
+    params.require(:warrior).permit(:title, :address, :latitude, :longitude, :elevation, :wins, :losses, :ties)
+  end
 end
