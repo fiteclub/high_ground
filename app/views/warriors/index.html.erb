@@ -1,41 +1,36 @@
-<p id="notice"><%= notice %></p>
+  <div class="row">
+    <div class="col-sm">
+      <div class="nes-container is-dark">
+        <h1>Warriors</h1>
+      </div>
+    </div>
+    <div class="col-sm">
+      <a class="nes-btn" href="<%= new_warrior_path %>">Add Warrior
+      </a>
+    </div>
+  </div>
+  <div class="row">
+    <table class="nes-table is-bordered is-centered is-dark">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Elevation</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
 
-<h1>Warriors</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Address</th>
-      <th>Latitude</th>
-      <th>Longitude</th>
-      <th>Elevation</th>
-      <th>Wins</th>
-      <th>Losses</th>
-      <th>Ties</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @warriors.each do |warrior| %>
-      <tr>
-        <td><%= warrior.title %></td>
-        <td><%= warrior.address %></td>
-        <td><%= warrior.latitude %></td>
-        <td><%= warrior.longitude %></td>
-        <td><%= warrior.elevation %></td>
-        <td><%= warrior.wins %></td>
-        <td><%= warrior.losses %></td>
-        <td><%= warrior.ties %></td>
-        <td><%= link_to 'Show', warrior %></td>
-        <td><%= link_to 'Edit', edit_warrior_path(warrior) %></td>
-        <td><%= link_to 'Destroy', warrior, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
+      <tbody>
+        <% @warriors.each do |warrior| %>
+          <tr>
+            <td><%= warrior.title %></td>
+            <td><%= warrior.elevation.round(2) %></td>
+            <td><%= link_to 'Show', warrior %></td>
+            <td><%= link_to 'Edit', edit_warrior_path(warrior) %></td>
+            <td><%= link_to 'Delete', warrior, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
 <br>
-
 <%= link_to 'New Warrior', new_warrior_path %>

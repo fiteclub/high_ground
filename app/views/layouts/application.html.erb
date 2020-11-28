@@ -1,16 +1,21 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>HighGround</title>
+<html lang="en">
+<head>
+  <title>highground</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+</head>
   <%= render 'layouts/navbar'  %>
   <body>
-  <div class="bg gif">
+  <div class="bg duel background-tint">
     <div class="container">
       <%= yield %>
     </div>
