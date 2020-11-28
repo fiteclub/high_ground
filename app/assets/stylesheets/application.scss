@@ -15,6 +15,8 @@
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
 
+// style.scss
+
 img.result {
   border-radius: 60%;
 }
@@ -27,9 +29,10 @@ body, html {
   height: 100%;
 }
 
-.bg.gif{
+.bg.duel{
   /* The image used */
-  background-image: url('flame_effect.gif');
+  /* Taken frrom https://sweet-cider.tumblr.com/post/161767766015 */
+  background-image: url('mustafar.png');
 
   /* Full height */
   height: 100%;
@@ -40,37 +43,16 @@ body, html {
   background-size: cover;
 }
 
-.bg.versus{
-  /* The image used */
-  background-image: url('vs_text.png');
-
-  /* Full height */
-  height: 50%;
-
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.background-tint {
+  background-color: rgba(0, 0, 0, .4);
+  background-blend-mode: multiply;
 }
 
-// #background {
-//   position:fixed;
-//   top: 50%;
-//   left: 50%;
-//   min-width: 100%;
-//   min-height: 100%;
-//   width: auto;
-//   height: auto;
-//   z-index: -100;
-//   -webkit-transform: translateX(-50%) translateY(-50%);
-//   transform: translateX(-50%) translateY(-50%);
-//   background: image-url('flame_effect.png') no-repeat;
-//   background-size: cover;
-//   background: linear-gradient(
-//                      rgba(20,20,20, .5), 
-//                      rgba(20,20,20, .5)),
-//                      image-url('vs_text.png');
-// }
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .layer {
   background-color: rgba(50, 50, 50, 0.7);
@@ -78,19 +60,6 @@ body, html {
   height: 100%;
 }
 
-
-.home_video {
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  object-fit: cover;
-  top: 0;
-  z-index: -2;
- }
- .home-video-wrapper {
- height: 100vh;
- display: flex;
- }
- h1.home {
-   color: white;
- }
+.inline-block {
+  display: inline-block;
+}

@@ -1,19 +1,15 @@
 <div class="container">
   <div class="row">
-    <div class="col-sm">
-      <h3>
-        <%= @player_one.title %>
-      </h3>
+    <div class="col-sm nes-container is-dark center">
+      <%= @player_one.title %>
     </div>
-    <div class="col-sm">
-      <h1>
-        VS
-      </h1>
+    <div class="col-sm center">
+        <span class="nes-text is-warning">
+          <h1>vs</h1>
+        </span>
     </div>
-    <div class="col-sm">
-      <h3>
-        <%= @player_two.title %>
-      </h3>
+    <div class="col-sm nes-container is-dark is-error center">
+      <%= @player_two.title %>
     </div>
   </div>
 </div>

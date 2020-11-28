@@ -1,9 +1,13 @@
-<h1>Inconceivable!</h1>
-<h2>It is a draw! Both players had an elevation of <%= @player_one.elevation.round(2) %> meters!</h2>
+<section class="message">
+  <!-- Balloon -->
+  <div class="nes-balloon from-right">
+    <p>
+      <h1>Inconceivable!</h1>
+      It is a draw! Both players had an elevation of <%= @player_one.elevation.round(2) %> meters!
+    </p>
+  </div>
+</section>
 <p>
-  <%= image_tag("tie.jpg", class: "result tie") %>
+  <%= image_tag("tie.jpg", class: "result tie", size: "10%") %>
   <%= render "versus" %>
-</p>
-<p>
-  I can't even... who wrote this script??
 </p>
