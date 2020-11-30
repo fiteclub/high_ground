@@ -11,6 +11,7 @@ Warrior.create(
   latitude: 28.396837,
   longitude: -80.605659,
   elevation: 400000
+  autolocate: false
 )
 
 Warrior.create(
@@ -19,6 +20,7 @@ Warrior.create(
   latitude: 11.373333,
   longitude: 142.591667,
   elevation: -10927
+  autolocate: false
 )
 
 Warrior.create(
