@@ -20,3 +20,18 @@ Warrior.create(
   longitude: 142.591667,
   elevation: -10927
 )
+
+Warrior.create(
+  title: "Bilbo Baggins",
+  address: "501 Buckland Road, Matamata 3472, New Zealand"
+)
+
+Warrior.create(
+  title: "John McClane",
+  address: "2121 Avenue of the Stars, Los Angeles, CA 90067"
+)
+
+Warrior.create(
+  title: "Her Royal Majesty Queen Elizabeth II",
+  address: "Westminster, London SW1A 1AA, United Kingdom"
+)
