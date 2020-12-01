@@ -29,7 +29,7 @@
   <div class="col-sm-10">
     <div class="nes-balloon from-left is-rounded">
       <%= "#{@results[:winner]} defeated #{@results[:loser]}" %>
-      <%= "with a difference of #{@results[:elevation_diff].round(2)} meters." %>
+      <%= "with a difference of #{number_with_delimiter(@results[:elevation_diff].round(2), :precision => 2, :delimeter=> ',')} meters." %>
     </div>
   </div>
   <div class="col-sm-1">

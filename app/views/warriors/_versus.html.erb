@@ -1,15 +1,11 @@
 <div class="container">
   <div class="row">
-    <div class="col-sm nes-container is-dark center">
-      <%= @player_one.title %>
-    </div>
+    <%= render partial: 'player', locals: { player: @player_one } %>
     <div class="col-sm center">
         <span class="nes-text is-warning">
           <h1>vs</h1>
         </span>
     </div>
-    <div class="col-sm nes-container is-dark is-error center">
-      <%= @player_two.title %>
-    </div>
+    <%= render partial: 'player', locals: { player: @player_two } %>
   </div>
 </div>

@@ -1,6 +1,6 @@
 <section class="message">
   <!-- Balloon -->
-  <div class="nes-balloon from-right">
+  <div class="nes-balloon">
     <p>
       <h1>Inconceivable!</h1>
       It is a draw! Both players had an elevation of <%= @player_one.elevation.round(2) %> meters!
@@ -8,6 +8,6 @@
   </div>
 </section>
 <p>
-  <%= image_tag("tie.jpg", class: "result tie", size: "10%") %>
+  <%= image_tag("tie.jpg", class: "result", size: '350x300') %>
   <%= render "versus" %>
 </p>
