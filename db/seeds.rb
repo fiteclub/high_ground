@@ -10,7 +10,7 @@ Warrior.create(
   address: "190 Oak Manor Drive, Cape Canaveral, Florida 32920, United States",
   latitude: 28.396837,
   longitude: -80.605659,
-  elevation: 400000
+  elevation: 400000,
   autolocate: false
 )
 
@@ -19,7 +19,7 @@ Warrior.create(
   address: "Challenger Deep, Mariana Trench, North Pacific Ocean",
   latitude: 11.373333,
   longitude: 142.591667,
-  elevation: -10927
+  elevation: -10927,
   autolocate: false
 )
 
