@@ -1,5 +1,9 @@
 <div class="col-sm nes-container is-dark with-title">
-  <p class="title"><%= nil %></p>
+  <% if winner %>
+    <span class="notify-badge">
+      <i class="nes-icon trophy is-medium"></i><i>WIN!</i>
+    </span>
+  <% end %>
   <p><%= player.title %></p>
   <p><%= number_with_precision(player.elevation.round(2), :precision => 2, :delimiter => ',') %>m</p>
 </div>

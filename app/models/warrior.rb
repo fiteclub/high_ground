@@ -8,6 +8,8 @@ class Warrior < ApplicationRecord
       hash[:tie] = player_one == player_two
       hash[:winner] = player_one > player_two ? player_one.title : player_two.title unless hash[:tie]
       hash[:loser] = player_one < player_two ? player_one.title : player_two.title unless hash[:tie]
+      hash[:player_one_win] = player_one > player_two ? true : false
+      hash[:player_two_win] = player_one < player_two ? true : false
     end
   end
 
