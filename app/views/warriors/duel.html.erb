@@ -1,13 +1,17 @@
-<div class = "site-wrapper">
-  <div class = "site-wrapper-inner">
-    <div class = "cover-container">
-      <div class="row">
-        <div class="col-sm-12 text-center">
-          <% if @results[:tie] %>
-            <%= render "tie" %>
-          <% else %>
-            <%= render "victory" %>
-          <% end %>
+<div class="bg duel background-tint">
+  <div class="container">
+    <div class = "site-wrapper">
+      <div class = "site-wrapper-inner">
+        <div class = "cover-container">
+          <div class="row">
+            <div class="col-sm-12 text-center">
+              <% if @results[:tie] %>
+                <%= render "tie" %>
+              <% else %>
+                <%= render "victory" %>
+              <% end %>
+            </div>
+          </div>
         </div>
       </div>
     </div>
