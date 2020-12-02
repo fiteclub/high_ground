@@ -9,8 +9,7 @@ class WarriorsController < ApplicationController
 
   # GET /warriors/1
   # GET /warriors/1.json
-  def show
-  end
+  def show; end
 
   # GET /warriors/new
   def new
@@ -18,14 +17,12 @@ class WarriorsController < ApplicationController
   end
 
   # GET /warriors/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /warriors
   # POST /warriors.json
   def create
     @warrior = Warrior.new(warrior_params)
-
     respond_to do |format|
       if @warrior.save
         format.html { redirect_to @warrior, notice: 'Warrior was successfully created.' }
@@ -61,8 +58,7 @@ class WarriorsController < ApplicationController
     end
   end
 
-  def pvp
-  end
+  def pvp; end
 
   def random
     @player_one = Warrior.all.sample

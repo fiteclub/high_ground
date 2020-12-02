@@ -1,12 +1,12 @@
 <div class="container">
 <% @results[:tie] %>
   <div class="row">
-    <%= render partial: 'player', locals: { player: @player_one, winner: @player_one==@results[:winner] } %>
+    <%= render partial: 'player', locals: { player: @player_one, winner: @player_one == @results[:winner] } %>
     <div class="col-sm center">
       <span class="nes-text is-warning">
         <h1>vs</h1>
       </span>
     </div>
-    <%= render partial: 'player', locals: { player: @player_two, winner: @player_two==@results[:winner] } %>
+    <%= render partial: 'player', locals: { player: @player_two, winner: @player_two == @results[:winner] } %>
   </div>
 </div>
