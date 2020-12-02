@@ -76,6 +76,6 @@ class WarriorsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def warrior_params
-    params.require(:warrior).permit(:title, :address, :latitude, :longitude, :elevation, :wins, :losses, :ties)
+    params.require(:warrior).permit(:title, :address, :latitude, :longitude, :elevation, :wins, :losses, :ties, :autolocate)
   end
 end
