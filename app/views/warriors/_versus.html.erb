@@ -7,6 +7,6 @@
         <h1>vs</h1>
       </span>
     </div>
-    <%= render partial: 'player', locals: { player: @player_two, winner: @results[:player_two_win] } %>
+    <%= render partial: 'player', locals: { player: @player_two, winner: @player_two==@results[:winner] } %>
   </div>
 </div>

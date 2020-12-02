@@ -2,7 +2,11 @@
   <!-- Balloon -->
   <div class="nes-balloon">
     <p>
-      <h1>Inconceivable!</h1>
+      <h1>
+        <span class="nes-text is-error">
+          Inconceivable!
+        </span>
+      </h1>
       It is a draw! Both players had an elevation of <%= @player_one.elevation.round(2) %> meters!
     </p>
   </div>
@@ -11,3 +15,6 @@
   <%= image_tag("tie.jpg", class: "result", size: '350x300') %>
   <%= render "versus" %>
 </p>
+<br>
+<br>
+<%= render partial: 'droid_say', locals: { droid_message: "Sir, the odds of both players having an elevation of exactly #{number_with_delimiter(@player_one.elevation.round(2), :precision => 2, :delimeter=> ',')} meters is approximately three-thousand-seven-hundred-twenty to one!" } %>
