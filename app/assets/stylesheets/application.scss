@@ -30,8 +30,6 @@ body, html {
 }
 
 .bg.duel{
-	/* The image used */
-	/* Taken frrom https://sweet-cider.tumblr.com/post/161767766015 */
 	background-image: image-url('mustafar.png');
 
 	/* Full height */
@@ -70,6 +68,7 @@ body, html {
 	padding-top:20px;
 	display:inline-block;
 }
+
 .notify-badge{
 	position: absolute;
 	left:-35px;
@@ -82,6 +81,26 @@ body, html {
   font-size:50px;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
-	// transform: rotate(-25deg);
 }
 
+.title-screen{
+	position: relative;
+	font-style: italic;
+	text-align: left;
+	text-align-last: right;
+	color: red;
+	padding:5px 5px;
+	font-size:150px;
+	text-shadow: 7px 10px #ffe100;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: black;
+}
+
+.bg.title{
+	background-image: image-url('duel.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: rgba(0, 0, 0, .9);
+	background-blend-mode: multiply;
+}

@@ -61,6 +61,15 @@ class WarriorsController < ApplicationController
     end
   end
 
+  def pvp
+  end
+
+  def random
+    @player_one = Warrior.all.sample
+    @player_two = params[:tie] ? @player_one : Warrior.all.sample
+    @results = Warrior.duel(@player_one, @player_two)
+  end
+
   def duel
     @player_one = Warrior.all.sample
     @player_two = params[:tie] ? @player_one : Warrior.all.sample

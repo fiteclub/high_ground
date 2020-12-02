@@ -2,13 +2,12 @@
   <div class="nes-balloon">
     <p>
       It's over <b><i><span class="nes-text is-error">
-        <%= @results[:loser] %>
-      </i></b></span>!
+        <%= @results[:loser].title %></i></b></span>!
     </p>
     <p>
       <h3><b><i>
       <span class="nes-text is-primary">
-        <%= @results[:winner] %>
+        <%= @results[:winner].title %>
       </span>
       </b></i> has the high ground!
       </h3>
@@ -28,7 +27,7 @@
   </div>
   <div class="col-sm-10">
     <div class="nes-balloon from-left is-rounded">
-      <%= "#{@results[:winner]} defeated #{@results[:loser]}" %>
+      <%= "#{@results[:winner].title} defeated #{@results[:loser].title}" %>
       <%= "with a difference of #{number_with_delimiter(@results[:elevation_diff].round(2), :precision => 2, :delimeter=> ',')} meters." %>
     </div>
   </div>
