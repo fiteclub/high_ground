@@ -52,6 +52,10 @@
                 </div>
 
                 <br>
+                <%= form_with url: fart_path do |form| %>
+                  <%= form.text_field :address %>
+                  <%= form.submit %>
+                <% end %>
                 <br>
 
                 <div class="row center">
