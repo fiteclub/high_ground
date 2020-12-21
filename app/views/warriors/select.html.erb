@@ -1,0 +1,79 @@
+<div class="bg duel background-tint">
+  <div class="container bg">
+    <div class = "site-wrapper">
+      <div class = "site-wrapper-inner">
+        <div class = "cover-container">
+          <div class="row">
+            <div class="col-sm-12 text-center">
+            <br><br>
+
+              <div class="container">
+
+                <div class="row">
+                  <div class='col-sm'>
+                  </div>
+                  <div class='col-sm center'>
+                  <%= render "title" %>
+                  </div>
+                  <div class='col-sm'>
+                  </div>
+                </div>
+                
+                <div class="row center">
+                  <br>
+                  <br>
+                  <%= render 'gamemode' %>
+                </div>
+
+                <br>
+                <br>
+
+                <div class="row center">
+                  <div class="col-sm center">
+                    <div class="nes-field">
+                      <label for="@player_one">
+                        <span class="nes-text is-primary">
+                          Player One
+                        </span>
+                      </label>
+                        <%= render 'mapbox_search' %>
+                    </div>
+                  </div> 
+                  <div class='col-sm center'>
+                    <div class="nes-field">
+                      <label for="@player_two">
+                        <span class="nes-text is-primary">
+                          Player Two
+                        </span>
+                      </label>
+                      <input type="text" id="@player_two" class="nes-input">
+                    </div>
+                  </div> 
+                </div>
+
+                <br>
+                <%# <%= form_with model: @warrior do |form| %>
+                  <%# <%= warrior_form.text_field :address %>
+                  <%# <%= fields_for :address, @warrior.address %>
+                  <%# <%= form.submit %>
+                <%# <% end %>
+
+                <br>
+
+                <div class="row center">
+                  <button type="button" class="nes-btn">
+                    <H3>
+                      &nbsp;Duel!&nbsp;
+                    </H3>
+                  </button>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
