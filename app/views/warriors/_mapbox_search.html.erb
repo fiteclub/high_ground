@@ -24,13 +24,16 @@
         min-width: 100%;
     }
 </style> %>
-<div id="geocoder"></div>
+
+<div id="geocoder">
 <script>
 	mapboxgl.accessToken = '<%= ENV['MAPBOX_ACCESS_TOKEN'] %>';
     var geocoder = new MapboxGeocoder({
         accessToken: mapboxgl.accessToken,
+        types: 'address'
         // types: 'country,region,place,postcode,locality,neighborhood'
     });
 
     geocoder.addTo('#geocoder');
 </script>
+</div>

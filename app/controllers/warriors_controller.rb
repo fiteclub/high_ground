@@ -22,7 +22,6 @@ class WarriorsController < ApplicationController
   # POST /warriors
   # POST /warriors.json
   def create
-    binding.pry
     @warrior = Warrior.new(warrior_params)
     respond_to do |format|
       if @warrior.save
@@ -60,12 +59,25 @@ class WarriorsController < ApplicationController
   end
 
   def duel
-    @player_one = params[:p1] ? Warrior.find(params[:p1]) : Warrior.all.sample
+    @player_one = 
+      if params[:p1]
+        Warrior.find(params[:p1])
+      elsif params[:p1_address]
+        new_warrior = Warrior.new(title: 'Player One', address: params[:p1_address], autolocate: true)
+        new_warrior.fetch_geo_data
+        new_warrior
+      else
+        Warrior.all.sample
+      end
     @player_two =
       if params[:tie]
         @player_one
       elsif params[:p2]
         Warrior.find(params[:p2])
+      elsif params[:p2_address]
+        new_warrior = Warrior.new(title: 'Player Two', address: params[:p2_address], autolocate: true)
+        new_warrior.fetch_geo_data
+        new_warrior
       else
         Warrior.all.sample
       end

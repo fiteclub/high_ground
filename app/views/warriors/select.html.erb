@@ -28,28 +28,7 @@
                 <br>
                 <br>
 
-                <div class="row center">
-                  <div class="col-sm center">
-                    <div class="nes-field">
-                      <label for="@player_one">
-                        <span class="nes-text is-primary">
-                          Player One
-                        </span>
-                      </label>
-                        <%= render 'mapbox_search' %>
-                    </div>
-                  </div> 
-                  <div class='col-sm center'>
-                    <div class="nes-field">
-                      <label for="@player_two">
-                        <span class="nes-text is-primary">
-                          Player Two
-                        </span>
-                      </label>
-                      <input type="text" id="@player_two" class="nes-input">
-                    </div>
-                  </div> 
-                </div>
+                  <%= render 'mapbox_autocomplete' %>
 
                 <br>
                 <%# <%= form_with model: @warrior do |form| %>
