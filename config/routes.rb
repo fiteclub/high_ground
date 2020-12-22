@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   get 'warriors/duel'
-  root 'warriors#duel'
+  root 'warriors#select'
   get 'duel', to: 'warriors#duel'
   resources :warriors do
     get 'select', on: :collection

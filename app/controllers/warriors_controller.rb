@@ -63,9 +63,7 @@ class WarriorsController < ApplicationController
       if params[:p1]
         Warrior.find(params[:p1])
       elsif params[:p1_address]
-        new_warrior = Warrior.new(title: 'Player One', address: params[:p1_address], autolocate: true)
-        new_warrior.fetch_geo_data
-        new_warrior
+        temp_warrior('Player One', params[:p1_address])
       else
         Warrior.all.sample
       end
@@ -75,9 +73,7 @@ class WarriorsController < ApplicationController
       elsif params[:p2]
         Warrior.find(params[:p2])
       elsif params[:p2_address]
-        new_warrior = Warrior.new(title: 'Player Two', address: params[:p2_address], autolocate: true)
-        new_warrior.fetch_geo_data
-        new_warrior
+        temp_warrior('Player Two', params[:p2_address])
       else
         Warrior.all.sample
       end
@@ -85,6 +81,12 @@ class WarriorsController < ApplicationController
   end
 
   private
+
+  def temp_warrior(title, address)
+    new_warrior = Warrior.new(title: title, address: address, autolocate: true)
+    new_warrior.fetch_geo_data
+    new_warrior
+  end
 
   # Use callbacks to share common setup or constraints between actions.
   def set_warrior
