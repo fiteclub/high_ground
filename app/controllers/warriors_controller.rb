@@ -19,6 +19,14 @@ class WarriorsController < ApplicationController
   # GET /warriors/1/edit
   def edit; end
 
+  def select_one_player; end
+
+  def select_two_player; end
+
+  def select_cpu; end
+
+  def select; end
+
   # POST /warriors
   # POST /warriors.json
   def create
