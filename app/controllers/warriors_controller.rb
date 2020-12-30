@@ -19,11 +19,23 @@ class WarriorsController < ApplicationController
   # GET /warriors/1/edit
   def edit; end
 
-  def select_one_player; end
+  def select_one_player
+    @gamemode = "1p"
+    @left_box = "Player One"
+    @right_box = "CPU"
+  end
 
-  def select_two_player; end
+  def select_two_player
+    @gamemode = "2p"
+    @left_box = "Player One"
+    @right_box = "Player Two"
+  end
 
-  def select_cpu; end
+  def select_cpu
+    @gamemode = "cpu"
+    @left_box = "CPU"
+    @right_box = "CPU"
+  end
 
   def select; end
 

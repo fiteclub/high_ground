@@ -1,0 +1,76 @@
+<div class="bg duel background-tint">
+  <div class="container bg">
+    <div class = "site-wrapper">
+      <div class = "site-wrapper-inner">
+        <div class = "cover-container">
+          <div class="row">
+            <div class="col-sm-12 text-center">
+              <br>
+              <br>
+              <div class="container">
+                <div class="row">
+                  <div class='col-sm'>
+                  </div>
+                  <div class='col-sm center'>
+                    <%= render "title" %>
+                  </div>
+                  <div class='col-sm'>
+                  </div>
+                </div>
+                <br>
+                <br>
+                <br>
+              </div>
+            </div>
+          </div>
+          <div class="row center">
+            <form autocomplete="off" action="/duel">
+              <div class="row center">
+                <div class="col-sm-4 center">
+                  <%= render partial: "player_input_box", locals: { player_name: @left_box, player_number: 1 } %>
+                </div>
+                <div class="col-sm-4 center">
+                  <div class="nes-container is-dark">
+                    <div style="background-color:#212529; padding: 1rem 0; display: block; text-align: left">
+                      <label>
+                        <input type="radio" class="nes-radio is-dark" name="answer-dark" checked />
+                        <span>One Player</span>
+                      </label>
+                      <br>
+                      <br>
+                      <label>
+                        <input type="radio" class="nes-radio is-dark" name="answer-dark" />
+                        <span>Two Players</span>
+                      </label>
+                      <br>
+                      <br>
+                      <label>
+                        <input type="radio" class="nes-radio is-dark" name="answer-dark" />
+                        <span>CPU Only</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-4 center">
+                  <%= render partial: "player_input_box", locals: { player_name: @right_box, player_number: 2 } %>
+                </div>
+              </div>
+              <br>
+              <br>
+              <div class="row center">
+                <button type="button submit" class="nes-btn">
+                  <H3>
+                    &nbsp;Duel!&nbsp;
+                  </H3>
+                </button>
+              </div>
+            </form>
+          </div>
+          <br>
+          <br>
+          <%= javascript_pack_tag 'mapbox_autocomplete', 'data-turbolinks-track': 'reload' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
