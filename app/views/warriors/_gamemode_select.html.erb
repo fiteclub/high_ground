@@ -33,19 +33,19 @@
                   <div class="nes-container is-dark">
                     <div style="background-color:#212529; padding: 1rem 0; display: block; text-align: left">
                       <label>
-                        <input type="radio" class="nes-radio is-dark" name="answer-dark" checked />
+                        <input type="radio" class="nes-radio is-dark" name="gamemode" value="1p" onclick="document.location.href='<%= '1p' %>'" <%= @gamemode == "1p" ? 'checked' : '' %> />
                         <span>One Player</span>
                       </label>
                       <br>
                       <br>
                       <label>
-                        <input type="radio" class="nes-radio is-dark" name="answer-dark" />
+                        <input type="radio" class="nes-radio is-dark" name="gamemode" value="2p" onclick="document.location.href='<%= '2p' %>'" <%= @gamemode == "2p" ? 'checked' : '' %> />
                         <span>Two Players</span>
                       </label>
                       <br>
                       <br>
                       <label>
-                        <input type="radio" class="nes-radio is-dark" name="answer-dark" />
+                        <input type="radio" class="nes-radio is-dark" name="gamemode" value="cpu" onclick="document.location.href='<%= 'cpu' %>'" <%= @gamemode == "cpu" ? 'checked' : '' %> />
                         <span>CPU Only</span>
                       </label>
                     </div>
@@ -74,3 +74,6 @@
     </div>
   </div>
 </div>
+<script>
+
+</script>
