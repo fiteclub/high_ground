@@ -1,4 +1,4 @@
-var geocodingClient = mapboxSdk({accessToken: '<%= ENV['MAPBOX_ACCESS_TOKEN'] %>'});
+var geocodingClient = mapboxSdk({accessToken: process.env.MAPBOX_ACCESS_TOKEN});
 
 function autocompleteSuggestionMapBoxAPI(inputParams, callback) {
     geocodingClient.geocoding.forwardGeocode({
