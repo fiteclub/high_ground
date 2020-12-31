@@ -1,0 +1,15 @@
+<div class="nes-container with-title is-centered" style="background-color:#e3e3e3">
+  <p class="title">
+    <%= player_name %>
+  </p>
+  <p>
+    <div class="autocomplete" style="width:300px;">
+      <% if player_name == "CPU" %>
+        ???
+      <% else %>
+        <input class="geo-input" id="<%= "myInput#{player_number}" %>" type="text" name="<%= "p#{player_number}_address" %>"
+                    placeholder="Enter Address">
+      <% end %>
+    </div>
+  </p>
+</div>

@@ -9,8 +9,7 @@ class WarriorsController < ApplicationController
 
   # GET /warriors/1
   # GET /warriors/1.json
-  def show
-  end
+  def show; end
 
   # GET /warriors/new
   def new
@@ -18,14 +17,32 @@ class WarriorsController < ApplicationController
   end
 
   # GET /warriors/1/edit
-  def edit
+  def edit; end
+
+  def select_one_player
+    @gamemode = "1p"
+    @left_box = "Player One"
+    @right_box = "CPU"
   end
+
+  def select_two_player
+    @gamemode = "2p"
+    @left_box = "Player One"
+    @right_box = "Player Two"
+  end
+
+  def select_cpu
+    @gamemode = "cpu"
+    @left_box = "CPU"
+    @right_box = "CPU"
+  end
+
+  def select; end
 
   # POST /warriors
   # POST /warriors.json
   def create
     @warrior = Warrior.new(warrior_params)
-
     respond_to do |format|
       if @warrior.save
         format.html { redirect_to @warrior, notice: 'Warrior was successfully created.' }
@@ -62,12 +79,34 @@ class WarriorsController < ApplicationController
   end
 
   def duel
-    @player_one = Warrior.all.sample
-    @player_two = params[:tie] ? @player_one : Warrior.all.sample
+    @player_one = 
+      if params[:p1]
+        Warrior.find(params[:p1])
+      elsif params[:p1_address]
+        temp_warrior('Player One', params[:p1_address])
+      else
+        Warrior.all.sample
+      end
+    @player_two =
+      if params[:tie]
+        @player_one
+      elsif params[:p2]
+        Warrior.find(params[:p2])
+      elsif params[:p2_address]
+        temp_warrior('Player Two', params[:p2_address])
+      else
+        Warrior.all.sample
+      end
     @results = Warrior.duel(@player_one, @player_two)
   end
 
   private
+
+  def temp_warrior(title, address)
+    new_warrior = Warrior.new(title: title, address: address, autolocate: true)
+    new_warrior.fetch_geo_data
+    new_warrior
+  end
 
   # Use callbacks to share common setup or constraints between actions.
   def set_warrior

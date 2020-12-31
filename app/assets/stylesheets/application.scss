@@ -18,70 +18,139 @@
 // style.scss
 
 img.result {
-	border-radius: 60%;
+  border-radius: 60%;
 }
 
 img.result.tie {
-	height: 500px;
+  height: 500px;
 }
 
-body, html {
-	height: 100%;
+body,
+html {
+  height: 100%;
 }
 
-.bg.duel{
-	/* The image used */
-	/* Taken frrom https://sweet-cider.tumblr.com/post/161767766015 */
-	background-image: image-url('mustafar.png');
+.bg.duel {
+  /* https://starwars.fandom.com/wiki/Star_Wars_Episode_III:_Revenge_of_the_Sith_(video_game) */
+  background-image: image-url("mustafar.png");
 
-	/* Full height */
-	height: 100%;
+  /* Full height */
+  height: 100%;
 
-	/* Center and scale the image nicely */
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-attachment: fixed;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .background-tint {
-	background-color: rgba(0, 0, 0, .4);
-	background-blend-mode: multiply;
+  background-color: rgba(0, 0, 0, 0.4);
+  background-blend-mode: multiply;
 }
 
 .center {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .layer {
-	background-color: rgba(50, 50, 50, 0.7);
-	width: 100%;
-	height: 100%;
+  background-color: rgba(50, 50, 50, 0.7);
+  width: 100%;
+  height: 100%;
 }
 
 .inline-block {
-	display: inline-block;
+  display: inline-block;
 }
 
 .item {
-	position:relative;
-	padding-top:20px;
-	display:inline-block;
-}
-.notify-badge{
-	position: absolute;
-	left:-35px;
-	top:-70px;
-	background:red;
-	text-align: center;
-	border-radius: 40px;
-	color:white;
-	padding:5px 10px;
-  font-size:50px;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: black;
-	// transform: rotate(-25deg);
+  position: relative;
+  padding-top: 20px;
+  display: inline-block;
 }
 
+.notify-badge {
+  position: absolute;
+  left: -35px;
+  top: -70px;
+  background: red;
+  text-align: center;
+  border-radius: 40px;
+  color: white;
+  padding: 5px 10px;
+  font-size: 50px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+.title-screen {
+  position: relative;
+  font-style: italic;
+  text-align: left;
+  text-align-last: right;
+  color: red;
+  padding: 5px 5px;
+  font-size: 150px;
+  text-shadow: 7px 10px #ffe100;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: black;
+}
+
+.bg.title {
+  background-image: image-url("duel.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.9);
+  background-blend-mode: multiply;
+}
+
+.autocomplete {
+  position: relative;
+  display: inline-block;
+}
+
+input {
+  border: 1px solid transparent;
+  background-color: #f1f1f1;
+  padding: 10px;
+  font-size: 14px;
+}
+
+input[type="text"] {
+  background-color: #f1f1f1;
+  width: 100%;
+}
+
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;
+  font-size: 12px;
+}
+
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  border-bottom: 1px solid #d4d4d4;
+}
+
+/*when hovering an item:*/
+.autocomplete-items div:hover {
+  background-color: #e9e9e9;
+}
+
+/*when navigating through the items using the arrow keys:*/
+.autocomplete-active {
+  background-color: DodgerBlue !important;
+  color: #ffffff;
+}

@@ -23,13 +23,6 @@ class Warrior < ApplicationRecord
     self.elevation = JSON.parse(json)["geoPoints"][0]["elevation"]
   end
 
-  # Mapbox returns a series of ele values in an array, which do not add to the correct value
-  # def get_elevation_mapbox
-  #   query="https://api.mapbox.com/v4/mapbox.mapbox-terrain-v2/tilequery/#{longitude},#{latitude}.json?&access_token=#{ENV['MAPBOX_ACCESS_TOKEN']}"
-  #   json = Net::HTTP.get_response(URI(query)).body
-  #   self.elevation = JSON.parse(json)["geoPoints"][0]["elevation"]
-  # end
-
   def as_high_as(opponent)
     elevation == opponent.elevation
   end
