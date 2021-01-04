@@ -16,5 +16,7 @@
   <%= render "versus" %>
 </p>
 <br>
+<%= render partial: 'rematch' %>
+<br>
 <br>
 <%= render partial: 'droid_say', locals: { droid_message: "Sir, the odds of both players having an elevation of exactly #{number_with_delimiter(@player_one.elevation.round(2), :precision => 2, :delimeter=> ',')} meters is approximately three-thousand-seven-hundred-twenty to one!" } %>

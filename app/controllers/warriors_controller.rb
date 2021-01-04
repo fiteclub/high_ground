@@ -98,6 +98,18 @@ class WarriorsController < ApplicationController
         Warrior.all.sample
       end
     @results = Warrior.duel(@player_one, @player_two)
+    @gamemode = params[:gamemode]
+    @rematch_message = rematch_message()
+  end
+
+  def rematch_message
+    message_choices = Array.new(15, "Another Duel!").append(
+      "My bloodthirst must be satisfied!",
+      "You underestimate my power!",
+      "Don't try it!",
+      "It's not over yet!"
+    )
+    return message_choices.sample
   end
 
   private

@@ -14,14 +14,14 @@
     </p>
   </div>
 </div>
-
 <div class="row center">
   <p>
     <%= image_tag("duel.png", class: "result", size: '300x300') %>
     <%= render "versus" %>
   </p>
 </div>
-
+<br>
+<%= render partial: 'rematch' %>
 <br>
 <br>
 <%= render partial: 'droid_say', locals: { droid_message: "#{@results[:winner].title} defeated #{@results[:loser].title}\nwith a difference of #{number_with_delimiter(@results[:elevation_diff].round(2), :precision => 2, :delimeter=> ',')} meters." } %>
