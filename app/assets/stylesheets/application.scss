@@ -154,3 +154,15 @@ input[type="text"] {
   background-color: DodgerBlue !important;
   color: #ffffff;
 }
+
+.footer {
+  position: absolute;
+  bottom: 0px;
+  padding: 0px;
+  width: 100%;
+  color: grey;
+  text-align: right;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0);
+  opacity: 0.5;
+}
