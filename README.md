@@ -1,6 +1,9 @@
 # the high_ground
 Determine who has the high ground, given two locations.
 
+[Play now!](https://hidden-inlet-56466.herokuapp.com/) (Patience you must have, for hosted on heroku it is.)
+
+
 ### Features
 + Uses [mapbox](https://www.mapbox.com/) for geocoding
   + Set your mapbox access token in Rails credentials <br />
